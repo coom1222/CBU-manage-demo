@@ -1,7 +1,6 @@
 package CBU.CBU_manage_demo.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +11,6 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 @Table(name="Post")
 // Soft Delete 설정
@@ -43,7 +41,7 @@ public class Post {
         this.title = title;
         this.content = content;
         this.category = category;
+        this.createdAt = LocalDateTime.now();
     }
-
 }
 

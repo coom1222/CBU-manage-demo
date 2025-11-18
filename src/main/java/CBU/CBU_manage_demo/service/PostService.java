@@ -51,6 +51,7 @@ public class PostService {
         post.setTitle(requestDto.getTitle());
         post.setContent(requestDto.getContent());
         post.setCategory(requestDto.getCategory());
+        post.setUpdatedAt(LocalDateTime.now());
 
         return postId;
     }
